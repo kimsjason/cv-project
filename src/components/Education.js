@@ -5,12 +5,13 @@ class Education extends Component {
   render() {
     return (
       <div className="education">
+        <h2>Education</h2>
         <div className="school">
-          <label for="school">School</label>
+          <label htmlFor="school">School</label>
           <input type="text" id="school" name="school"></input>
         </div>
         <div className="degree">
-          <label for="degree">Degree</label>
+          <label htmlFor="degree">Degree</label>
           <input type="text" id="degree" name="degree"></input>
         </div>
         <div>Start Date</div>

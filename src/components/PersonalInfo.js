@@ -11,6 +11,7 @@ class PersonalInfo extends Component {
   render() {
     return (
       <div className="personal-info">
+        <h2>Personal Information</h2>
         <Name />
         <Contact />
         <Address />
