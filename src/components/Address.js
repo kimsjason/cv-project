@@ -5,15 +5,15 @@ class Address extends Component {
     return (
       <div className="address">
         <div className="street">
-          <label for="street">Street</label>
+          <label htmlFor="street">Street</label>
           <input type="text" id="street" name="street"></input>
         </div>
         <div className="city">
-          <label for="city">City/Town</label>
+          <label htmlFor="city">City/Town</label>
           <input type="text" id="city" name="city"></input>
         </div>
         <div className="postal-code">
-          <label for="postal-code">Postal Code</label>
+          <label htmlFor="postal-code">Postal Code</label>
           <input type="text" id="postal-code" name="postal-code"></input>
         </div>
       </div>

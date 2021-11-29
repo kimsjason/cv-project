@@ -5,11 +5,11 @@ class Contact extends Component {
     return (
       <div className="contact">
         <div className="email">
-          <label for="email">Email</label>
+          <label htmlFor="email">Email</label>
           <input type="text" id="email" name="email"></input>
         </div>
         <div className="phone">
-          <label for="phone">Phone</label>
+          <label htmlFor="phone">Phone</label>
           <input type="text" id="phone" name="phone"></input>
         </div>
       </div>

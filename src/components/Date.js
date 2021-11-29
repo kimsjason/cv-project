@@ -1,13 +1,10 @@
 import { Component } from "react";
 class Date extends Component {
   render() {
-    const date = new Date(2021, 20, 10);
-    console.log(date);
-    //const currentYear = date.getFullYear();
     return (
       <div className="date">
         <div className="month">
-          <label for="month"></label>
+          <label htmlFor="month"></label>
           <select id="month" name="month">
             <option value="">--Please select a month--</option>
             <option value="january">January</option>
@@ -25,13 +22,13 @@ class Date extends Component {
           </select>
         </div>
         <div className="year">
-          <label for="year"></label>
+          <label htmlFor="year"></label>
           <input
             type="text"
             id="year"
             name="year"
-            minlength="4"
-            maxlength="4"
+            minLength="4"
+            maxLength="4"
             min="1900"
             max="2021"
           ></input>
