@@ -1,13 +1,12 @@
-import { PersonalInfo } from "./components/PersonalInfo";
-import { Education } from "./components/Education";
-import { WorkExperience } from "./components/WorkExperience";
+import { Input } from "./components/Input";
+import { Output } from "./components/Output";
+import "./styles/main.css";
 
 function App() {
   return (
-    <div>
-      <PersonalInfo />
-      <Education />
-      <WorkExperience />
+    <div className="cv-app">
+      <Input />
+      <Output />
     </div>
   );
 }
