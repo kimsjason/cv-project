@@ -1,14 +1,8 @@
-import { Input } from "./components/Input";
-import { Output } from "./components/Output";
+import { CV } from "./components/CV";
 import "./styles/main.css";
 
 function App() {
-  return (
-    <div className="cv-app">
-      <Input />
-      <Output />
-    </div>
-  );
+  return <CV />;
 }
 
 export default App;
