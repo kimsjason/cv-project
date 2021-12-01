@@ -10,6 +10,10 @@ class PersonalInfo extends Component {
     this.handleLastName = this.handleLastName.bind(this);
     this.handleEmail = this.handleEmail.bind(this);
     this.handlePhone = this.handlePhone.bind(this);
+    this.handleStreet = this.handleStreet.bind(this);
+    this.handleCity = this.handleCity.bind(this);
+    this.handleState = this.handleState.bind(this);
+    this.handlePostalCode = this.handlePostalCode.bind(this);
   }
 
   handleFirstName(e) {
@@ -28,6 +32,22 @@ class PersonalInfo extends Component {
     this.props.handlePhone(e);
   }
 
+  handleStreet(e) {
+    this.props.handleStreet(e);
+  }
+
+  handleCity(e) {
+    this.props.handleCity(e);
+  }
+
+  handleState(e) {
+    this.props.handleState(e);
+  }
+
+  handlePostalCode(e) {
+    this.props.handlePostalCode(e);
+  }
+
   render() {
     return (
       <div className="personal-info">
@@ -40,7 +60,12 @@ class PersonalInfo extends Component {
           handleEmail={this.handleEmail}
           handlePhone={this.handlePhone}
         />
-        <Address />
+        <Address
+          handleStreet={this.handleStreet}
+          handleCity={this.handleCity}
+          handleState={this.handleState}
+          handlePostalCode={this.handlePostalCode}
+        />
       </div>
     );
   }

@@ -10,6 +10,10 @@ class Output extends Component {
     const lastName = this.props.lastName;
     const email = this.props.email;
     const phone = this.props.phone;
+    const street = this.props.street;
+    const city = this.props.city;
+    const state = this.props.state;
+    const postalCode = this.props.postalCode;
 
     return (
       <div className="output">
@@ -22,10 +26,7 @@ class Output extends Component {
           </div>
 
           <div className="address">
-            Address
-            <div className="street">Street</div>
-            <div className="city">City/Town</div>
-            <div className="postal-code">Postal Code</div>
+            {street + " " + city + ", " + state + " " + postalCode}
           </div>
         </div>
         <div className="education">
