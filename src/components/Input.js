@@ -8,6 +8,8 @@ class Input extends Component {
     super(props);
     this.handleFirstName = this.handleFirstName.bind(this);
     this.handleLastName = this.handleLastName.bind(this);
+    this.handleEmail = this.handleEmail.bind(this);
+    this.handlePhone = this.handlePhone.bind(this);
   }
 
   handleFirstName(e) {
@@ -18,12 +20,22 @@ class Input extends Component {
     this.props.handleLastName(e);
   }
 
+  handleEmail(e) {
+    this.props.handleEmail(e);
+  }
+
+  handlePhone(e) {
+    this.props.handlePhone(e);
+  }
+
   render() {
     return (
       <div className="input">
         <PersonalInfo
           handleFirstName={this.handleFirstName}
           handleLastName={this.handleLastName}
+          handleEmail={this.handleEmail}
+          handlePhone={this.handlePhone}
         />
         <Education />
         <WorkExperience />

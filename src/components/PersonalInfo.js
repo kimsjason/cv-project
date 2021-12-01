@@ -8,6 +8,8 @@ class PersonalInfo extends Component {
     super(props);
     this.handleFirstName = this.handleFirstName.bind(this);
     this.handleLastName = this.handleLastName.bind(this);
+    this.handleEmail = this.handleEmail.bind(this);
+    this.handlePhone = this.handlePhone.bind(this);
   }
 
   handleFirstName(e) {
@@ -18,6 +20,14 @@ class PersonalInfo extends Component {
     this.props.handleLastName(e);
   }
 
+  handleEmail(e) {
+    this.props.handleEmail(e);
+  }
+
+  handlePhone(e) {
+    this.props.handlePhone(e);
+  }
+
   render() {
     return (
       <div className="personal-info">
@@ -26,7 +36,10 @@ class PersonalInfo extends Component {
           handleFirstName={this.handleFirstName}
           handleLastName={this.handleLastName}
         />
-        <Contact />
+        <Contact
+          handleEmail={this.handleEmail}
+          handlePhone={this.handlePhone}
+        />
         <Address />
       </div>
     );

@@ -8,14 +8,17 @@ class Output extends Component {
   render() {
     const firstName = this.props.firstName;
     const lastName = this.props.lastName;
+    const email = this.props.email;
+    const phone = this.props.phone;
+
     return (
       <div className="output">
         <div className="personal-info">
           <div className="full-name">{firstName + " " + lastName}</div>
           <div className="contact">
             Contact
-            <div className="phone">Phone</div>
-            <div className="email">Email</div>
+            <div className="phone">{phone}</div>
+            <div className="email">{email}</div>
           </div>
 
           <div className="address">
