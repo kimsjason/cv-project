@@ -14,6 +14,10 @@ class Output extends Component {
     const city = this.props.city;
     const state = this.props.state;
     const postalCode = this.props.postalCode;
+    const school = this.props.school;
+    const degree = this.props.degree;
+    const month = this.props.month;
+    const year = this.props.year;
 
     return (
       <div className="output">
@@ -30,9 +34,9 @@ class Output extends Component {
           </div>
         </div>
         <div className="education">
-          <div className="school">School</div>
-          <div className="degree">Degree</div>
-          <div className="date">Start Date</div>
+          <div className="school">{school}</div>
+          <div className="degree">{degree}</div>
+          <div className="date">{month + " " + year}</div>
           <div className="date">End Date</div>
         </div>
         <div className="work-experience">

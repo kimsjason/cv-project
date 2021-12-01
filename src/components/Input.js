@@ -6,6 +6,7 @@ import { WorkExperience } from "./WorkExperience";
 class Input extends Component {
   constructor(props) {
     super(props);
+
     this.handleFirstName = this.handleFirstName.bind(this);
     this.handleLastName = this.handleLastName.bind(this);
     this.handleEmail = this.handleEmail.bind(this);
@@ -14,6 +15,10 @@ class Input extends Component {
     this.handleCity = this.handleCity.bind(this);
     this.handleState = this.handleState.bind(this);
     this.handlePostalCode = this.handlePostalCode.bind(this);
+    this.handleSchool = this.handleSchool.bind(this);
+    this.handleDegree = this.handleDegree.bind(this);
+    this.handleMonth = this.handleMonth.bind(this);
+    this.handleYear = this.handleYear.bind(this);
   }
 
   handleFirstName(e) {
@@ -48,6 +53,22 @@ class Input extends Component {
     this.props.handlePostalCode(e);
   }
 
+  handleSchool(e) {
+    this.props.handleSchool(e);
+  }
+
+  handleDegree(e) {
+    this.props.handleDegree(e);
+  }
+
+  handleMonth(e) {
+    this.props.handleMonth(e);
+  }
+
+  handleYear(e) {
+    this.props.handleYear(e);
+  }
+
   render() {
     return (
       <div className="input">
@@ -61,7 +82,12 @@ class Input extends Component {
           handleState={this.handleState}
           handlePostalCode={this.handlePostalCode}
         />
-        <Education />
+        <Education
+          handleSchool={this.handleSchool}
+          handleDegree={this.handleDegree}
+          handleMonth={this.handleMonth}
+          handleYear={this.handleYear}
+        />
         <WorkExperience />
       </div>
     );

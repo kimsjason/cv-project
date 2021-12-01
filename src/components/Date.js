@@ -1,11 +1,25 @@
 import { Component } from "react";
 class Date extends Component {
+  constructor(props) {
+    super(props);
+    this.handleMonth = this.handleMonth.bind(this);
+    this.handleYear = this.handleYear.bind(this);
+  }
+
+  handleMonth(e) {
+    this.props.handleMonth(e);
+  }
+
+  handleYear(e) {
+    this.props.handleYear(e);
+  }
+
   render() {
     return (
       <div className="date">
         <div className="month">
           <label htmlFor="month"></label>
-          <select id="month" name="month">
+          <select id="month" name="month" onChange={this.handleMonth}>
             <option value="">--Please select a month--</option>
             <option value="january">January</option>
             <option value="february">Feburary</option>
@@ -31,6 +45,7 @@ class Date extends Component {
             maxLength="4"
             min="1900"
             max="2021"
+            onChange={this.handleYear}
           ></input>
         </div>
       </div>

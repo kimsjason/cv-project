@@ -15,6 +15,10 @@ class CV extends Component {
       city: "",
       state: "",
       postalCode: "",
+      school: "",
+      degree: "",
+      month: "",
+      year: "",
     };
 
     this.handleFirstName = this.handleFirstName.bind(this);
@@ -25,6 +29,10 @@ class CV extends Component {
     this.handleCity = this.handleCity.bind(this);
     this.handleState = this.handleState.bind(this);
     this.handlePostalCode = this.handlePostalCode.bind(this);
+    this.handleSchool = this.handleSchool.bind(this);
+    this.handleDegree = this.handleDegree.bind(this);
+    this.handleMonth = this.handleMonth.bind(this);
+    this.handleYear = this.handleYear.bind(this);
   }
 
   handleFirstName(e) {
@@ -75,6 +83,30 @@ class CV extends Component {
     });
   }
 
+  handleSchool(e) {
+    this.setState({
+      school: e.target.value,
+    });
+  }
+
+  handleDegree(e) {
+    this.setState({
+      degree: e.target.value,
+    });
+  }
+
+  handleMonth(e) {
+    this.setState({
+      month: e.target.value,
+    });
+  }
+
+  handleYear(e) {
+    this.setState({
+      year: e.target.value,
+    });
+  }
+
   render() {
     const firstName = this.state.firstName;
     const lastName = this.state.lastName;
@@ -84,6 +116,10 @@ class CV extends Component {
     const city = this.state.city;
     const state = this.state.state;
     const postalCode = this.state.postalCode;
+    const school = this.state.school;
+    const degree = this.state.degree;
+    const month = this.state.month;
+    const year = this.state.year;
 
     return (
       <div className="cv-app">
@@ -96,6 +132,10 @@ class CV extends Component {
           handleCity={this.handleCity}
           handleState={this.handleState}
           handlePostalCode={this.handlePostalCode}
+          handleSchool={this.handleSchool}
+          handleDegree={this.handleDegree}
+          handleMonth={this.handleMonth}
+          handleYear={this.handleYear}
         />
         <Output
           firstName={firstName}
@@ -106,6 +146,10 @@ class CV extends Component {
           city={city}
           state={state}
           postalCode={postalCode}
+          school={school}
+          degree={degree}
+          month={month}
+          year={year}
         />
       </div>
     );
